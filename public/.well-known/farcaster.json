@@ -1,0 +1,30 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "frame": {
+    "version": "1",
+    "name": "POV Coin",
+    "subtitle": "Built with Zara",
+    "description": "POV Coin is a Base Mini App built with Zara.",
+    "iconUrl": "https://0co.to/images/zara-2.png",
+    "homeUrl": "https://85168a0346d2494fa3d7ed6f4670113e-qr40.vercel.app",
+    "splashImageUrl": "https://85168a0346d2494fa3d7ed6f4670113e-qr40.vercel.app/splash.png",
+    "splashBackgroundColor": "#000000",
+    "heroImageUrl": "https://85168a0346d2494fa3d7ed6f4670113e-qr40.vercel.app/image.png",
+    "tagline": "POV Coin",
+    "screenshotUrls": [
+      "https://85168a0346d2494fa3d7ed6f4670113e-qr40.vercel.app/screenshot.png",
+      "https://85168a0346d2494fa3d7ed6f4670113e-qr40.vercel.app/screenshot.png"
+    ],
+    "primaryCategory": "social",
+    "tags": [
+      "base",
+      "miniapp",
+      "onchainkit"
+    ],
+    "webhookUrl": "https://85168a0346d2494fa3d7ed6f4670113e-qr40.vercel.app/api/webhook"
+  }
+}
