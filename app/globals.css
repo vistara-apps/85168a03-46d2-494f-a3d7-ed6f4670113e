@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Professional Finance Theme - Wall Street meets Crypto */
+  --color-bg: #0a1628;
+  --color-fg: #f8fafc;
+  --color-accent: #ffd700;
+  --color-primary: #1e40af;
+  --color-surface: #1e293b;
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+  
+  /* CELO Theme */
+  --celo-bg: #000000;
+  --celo-fg: #ffffff;
+  --celo-accent: #fbcc5c;
+  --celo-primary: #35d07f;
+  --celo-surface: #1a1a1a;
+  --celo-text-primary: #ffffff;
+  --celo-text-secondary: #a0a0a0;
+  
+  /* SOLANA Theme */
+  --solana-bg: #1a0d2e;
+  --solana-fg: #ffffff;
+  --solana-accent: #dc1fff;
+  --solana-primary: #9945ff;
+  --solana-surface: #2d1b4e;
+  --solana-text-primary: #ffffff;
+  --solana-text-secondary: #b794f6;
+  
+  /* BASE Theme */
+  --base-bg: #0052ff;
+  --base-fg: #ffffff;
+  --base-accent: #0052ff;
+  --base-primary: #0052ff;
+  --base-surface: #1a4fff;
+  --base-text-primary: #ffffff;
+  --base-text-secondary: #b3d4ff;
+  
+  /* COINBASE Theme */
+  --coinbase-bg: #0d1421;
+  --coinbase-fg: #ffffff;
+  --coinbase-accent: #0052ff;
+  --coinbase-primary: #0052ff;
+  --coinbase-surface: #1a2332;
+  --coinbase-text-primary: #ffffff;
+  --coinbase-text-secondary: #8a9ba8;
+}
+
+[data-theme="celo"] {
+  --color-bg: var(--celo-bg);
+  --color-fg: var(--celo-fg);
+  --color-accent: var(--celo-accent);
+  --color-primary: var(--celo-primary);
+  --color-surface: var(--celo-surface);
+  --color-text-primary: var(--celo-text-primary);
+  --color-text-secondary: var(--celo-text-secondary);
+}
+
+[data-theme="solana"] {
+  --color-bg: var(--solana-bg);
+  --color-fg: var(--solana-fg);
+  --color-accent: var(--solana-accent);
+  --color-primary: var(--solana-primary);
+  --color-surface: var(--solana-surface);
+  --color-text-primary: var(--solana-text-primary);
+  --color-text-secondary: var(--solana-text-secondary);
+}
+
+[data-theme="base"] {
+  --color-bg: var(--base-bg);
+  --color-fg: var(--base-fg);
+  --color-accent: var(--base-accent);
+  --color-primary: var(--base-primary);
+  --color-surface: var(--base-surface);
+  --color-text-primary: var(--base-text-primary);
+  --color-text-secondary: var(--base-text-secondary);
+}
+
+[data-theme="coinbase"] {
+  --color-bg: var(--coinbase-bg);
+  --color-fg: var(--coinbase-fg);
+  --color-accent: var(--coinbase-accent);
+  --color-primary: var(--coinbase-primary);
+  --color-surface: var(--coinbase-surface);
+  --color-text-primary: var(--coinbase-text-primary);
+  --color-text-secondary: var(--coinbase-text-secondary);
+}
+
+@layer base {
+  * {
+    @apply border-gray-700;
+  }
+  
+  body {
+    @apply bg-bg text-fg font-sans antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-surface/80 backdrop-blur-sm border border-white/10 rounded-lg shadow-card;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-accent to-primary text-bg px-6 py-3 rounded-lg font-semibold hover:from-accent/90 hover:to-primary/90 transition-all duration-200 shadow-lg hover:shadow-xl;
+  }
+  
+  .btn-secondary {
+    @apply bg-surface border border-accent/30 text-fg px-6 py-3 rounded-lg font-medium hover:bg-accent/10 hover:border-accent/50 transition-all duration-200;
+  }
+  
+  .metric-card {
+    @apply glass-card p-6 hover:bg-surface/90 transition-all duration-200;
+  }
+  
+  .opinion-card {
+    @apply glass-card p-4 hover:bg-surface/90 transition-all duration-200 border-l-4 border-l-accent;
+  }
+  
+  .review-card {
+    @apply glass-card p-6 hover:bg-surface/90 transition-all duration-200;
+  }
+  
+  .tip-button {
+    @apply bg-accent/20 hover:bg-accent/30 text-accent border border-accent/30 hover:border-accent/50 px-3 py-1 rounded-md text-sm font-medium transition-all duration-200;
+  }
+  
+  .tip-button.tipped {
+    @apply bg-accent text-bg border-accent;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent;
+  }
+  
+  .border-gradient {
+    background: linear-gradient(var(--color-surface), var(--color-surface)) padding-box,
+                linear-gradient(45deg, var(--color-accent), var(--color-primary)) border-box;
+    border: 2px solid transparent;
+  }
+}
